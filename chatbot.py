@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_chat import message
 # from langchain.chat_models import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 # from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import ConversationChain
@@ -22,9 +23,8 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
 # Initialize ChatOpenAI and ConversationChain
 # llm = ChatOpenAI(model_name="gpt-4o-mini")
 # llm = ChatGoogleGenerativeAI(model = "gemini-pro")
-llm = ChatOpenAI(model = "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
-                      openai_api_key = st.secrets["TOGETHER_API_KEY"] , ## use your key
-                      openai_api_base = "https://api.together.xyz/v1"
+llm = ChatGoogleGenerativeA(model = "gemini-1.5-flash-lite",
+                      openai_api_key = st.secrets["GOOGLE_API_KEY"] ## use your key
 
 )
 
