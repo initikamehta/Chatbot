@@ -23,7 +23,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
 # Initialize ChatOpenAI and ConversationChain
 # llm = ChatOpenAI(model_name="gpt-4o-mini")
 # llm = ChatGoogleGenerativeAI(model = "gemini-pro")
-llm = ChatGoogleGenerativeAI(model = "gemini-1.5-flash-lite",
+llm = ChatGoogleGenerativeAI(model = "gemini-1.5-flash-latest",
                       openai_api_key = st.secrets["GOOGLE_API_KEY"] ## use your key
 
 )
